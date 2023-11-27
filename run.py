@@ -1,5 +1,5 @@
-from moje_delo import moje_delo
-from deloglasnik import deloglasnik
+from scripts import moje_delo
+from scripts import deloglasnik
 
 
 if __name__ == "__main__":
