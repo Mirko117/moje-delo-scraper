@@ -7,7 +7,7 @@ def moje_delo():
     targeted_elements = ['div', 'a']
 
     if "moje_delo.html" in os.listdir("html"):
-        os.remove("moje_delo.html")
+        os.remove("html/moje_delo.html")
 
     html = open("html/moje_delo.html", "w", encoding="utf-8")
 

@@ -7,7 +7,7 @@ def deloglasnik():
     if "deloglasnik.html" in os.listdir("html"):
         os.remove("html/deloglasnik.html")
     
-    html = open("html/deloglsnik.html", "w", encoding="utf-8")
+    html = open("html/deloglasnik.html", "w", encoding="utf-8")
 
     head = open("html/head.html", "r")
     lines = head.readlines()
