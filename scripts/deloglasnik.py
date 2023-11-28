@@ -45,10 +45,13 @@ def deloglasnik():
                 description = job.find("p", class_="intro-txt")
                 try:
                     description = description.text
-                    html.write(f"\t<p class='jobs'><a class='jobs' href='{link}'>{(name.text).strip()}</a></p>\n\t<p class='jobs'>{date.text}</p>\n\t<p class='jobs'>{description}</p><hr>\n\n")
+                    html.write(f"\t<p class='jobs'><a class='jobs' href='{link}'>{(name.text).strip()}</a></p>\n")
+                    html.write(f"\t<p class='jobs'>{date.text}</p>\n")
+                    html.write(f"\t<p class='jobs'>{description}</p><hr>\n\n")
                 except Exception as e:
                     print(e)
-                    html.write(f"\t<p class='jobs'><a class='jobs' href='{link}'>{(name.text).strip()}</a></p>\n\t<p class='jobs'>{date.text}</p><hr>\n\n")
+                    html.write(f"\t<p class='jobs'><a class='jobs' href='{link}'>{(name.text).strip()}</a></p>\n")
+                    html.write(f"\t<p class='jobs'>{date.text}</p><hr>\n\n")
     html.write("</body>")
     html.close()
     print("Deloglasnik is completed!")

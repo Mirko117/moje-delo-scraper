@@ -44,10 +44,13 @@ def moje_delo():
                         if link != "#":
                             try:
                                 description = description.text
-                                html.write(f"\t<p class='jobs'><a class='jobs' href='https://www.mojedelo.com{link}'>{name.text}</a></p>\n\t<p class='jobs'>{date}</p>\n\t<p class='jobs'>{description}</p><hr>\n\n")
+                                html.write(f"\t<p class='jobs'><a class='jobs' href='https://www.mojedelo.com{link}'>{name.text}</a></p>\n")
+                                html.write(f"\t<p class='jobs'>{date}</p>\n")
+                                html.write(f"\t<p class='jobs'>{description}</p><hr>\n\n")
                             except Exception as e:
                                 print(e)
-                                html.write(f"\t<p class='jobs'><a class='jobs' href='https://www.mojedelo.com{link}'>{name.text}</a></p>\n\t<p class='jobs'>{date}</p><hr>\n\n")
+                                html.write(f"\t<p class='jobs'><a class='jobs' href='https://www.mojedelo.com{link}'>{name.text}</a></p>\n")
+                                html.write(f"\t<p class='jobs'>{date}</p><hr>\n\n")
     html.write("</body>")
     html.close()
     print("Moje Delo is completed!")
